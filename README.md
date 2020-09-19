@@ -1,13 +1,18 @@
 # Processmaker-3.4.11
-Install Processmaker on docker :
+###Install ProcessMaker on docker :
 
-Clone Processmaker on your system and run docker compose
+Clone ProcessMaker on your system and run docker compose
 ````
 git clone https://github.com/sermajid/processmaker-3.4.11.git
 cd processmaker-3.4.11
 docker-compose up -d
 ````
-if you need to mysql, change the docker-compose.yml to :
+Open your ProcessMaker on port 8001
+
+<hr>
+
+##Install Processmaker on docker with mysql and phpmyadmin:
+If you need to mysql, change the docker-compose.yml to :
 ````
 version: "3"
 services:
@@ -49,4 +54,15 @@ services:
 volumes:
   proceessmaker_data:
   myqsl:
+````
+Open your processmaker on port 8001 and open your phpmyadmin on port 8081
+
+##Install ProcessMaker
+If you change docker-compose like the example above , in the fourth part of installing the program set it like this :
+````
+Database Engine: MySQL
+Host Name: mariadb
+Port: 3306
+Username: MYSQL_USER (Your mysql username)
+Password: MYSQL_PASSWORD (Your mysql password)
 ````
